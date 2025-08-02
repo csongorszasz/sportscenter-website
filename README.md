@@ -2,6 +2,8 @@
 
 ## Demo
 
+https://github.com/user-attachments/assets/dacef894-7603-4060-946f-870fe0c311d7
+
 ## Tech stack
 
 - backend:
