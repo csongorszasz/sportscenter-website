@@ -1,0 +1,28 @@
+<div class='wrapper form-wrapper'>
+  <h1>Pályakereső</h1>
+  <form action='/submit-form/palyakereses' method='get' id='kereses-form'>
+    <div class='form-row'>
+      <label for='palyaTipus'>Pályatípus</label>
+      <select id='palyaTipus' name='palyaTipus' required>
+        <option value='' disabled selected>-</option>
+        <option value='kosarlabda'>Kosárlabda</option>
+        <option value='foci'>Foci</option>
+        <option value='tenisz'>Tenisz</option>
+        <option value='baseball'>Baseball</option>
+        <option value='röplabda'>Röplabda</option>
+      </select>
+    </div>
+
+    <div class='form-row'>
+      <label for='minOraber'>Min.órabér(RON)</label>
+      <input type='text' id='minOraber' name='minOraber' />
+    </div>
+
+    <div class='form-row'>
+      <label for='maxOraber'>Max.órabér(RON)</label>
+      <input type='text' id='maxOraber' name='maxOraber' />
+    </div>
+
+    <button type='submit' class='form-row tight'>Keres</button>
+  </form>
+</div>

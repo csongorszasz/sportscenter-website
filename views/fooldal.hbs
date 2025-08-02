@@ -1,0 +1,19 @@
+{{> palyakereses}}
+<div id="palyak-listing">
+    {{#if palyak}}
+        {{#each palyak as |palya|}}
+            <div class="palya">
+                <div class="palya-details">
+                    <p><span class="detail-key important-detail">Pálya </span><span class="detail-value important-detail">{{palya.ID}}</span></p>
+                    <p><span class="detail-key">Típus:</span> <span class="detail-value">{{palya.Tipus}}</span></p>
+                    <p><span class="detail-key">Órabér:</span> <span class="detail-value">{{palya.Oraber}} RON</span></p>
+                    <p><span class="detail-key">Cím:</span> <span class="detail-value">{{palya.Cim}}</span></p>
+                </div>
+                <a href="/palyak/{{palya.ID}}"><button class="wide bottom-space no-top-space darkgray no-rounding">Részletek</button></a>
+                {{> kepek palya=palya deletable=false full-size=false}}
+            </div>
+        {{/each}}
+    {{else}}
+        <p>Nincs találat pályákra</p>
+    {{/if}}
+</div>

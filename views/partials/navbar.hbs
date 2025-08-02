@@ -1,0 +1,26 @@
+<div class='navbar-fixed'>
+  <nav>
+    <div class='nav-wrapper'>
+      <div class='nav-left'>
+        <a href='/' class='site-title'>Sportközpont pályafoglaló</a>
+        {{#if userInfo.loggedIn}}
+          <label>@{{userInfo.felhasznalonev}}</label>
+        {{/if}}
+      </div>
+      <ul class='right'>
+        {{#if userInfo.loggedIn}}
+          {{#ifEquals userInfo.role 'admin'}}
+            <li><a href='/sportpalya-hozzaadas' class='nav-button'>Pálya hozzáadása</a></li>
+            <li><a href='/diakok' class='nav-button'>Diákok</a></li>
+            <li><a href='/osszes-foglalas' class='nav-button'>Összes foglalás</a></li>
+          {{/ifEquals}}
+          <li><a href='/foglalasaim' class='nav-button'>Foglalásaim</a></li>
+          <li><a href='/logout' class='logout'>KIJELENTKEZÉS</a></li>
+        {{else}}
+          <li><a href='/register' class='register'>REGISZTRÁCIÓ</a></li>
+          <li><a href='/login' class='login'>BEJELENTKEZÉS</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </nav>
+</div>

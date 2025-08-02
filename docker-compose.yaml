@@ -1,0 +1,17 @@
+services:
+  webprog-mysql:
+    image: mysql:8.0.33
+    restart: unless-stopped
+    container_name: projekt
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: HnsAdrt0WtynpKJd
+      MYSQL_USER: webprog
+      MYSQL_PASSWORD: VgJUjBd8
+      MYSQL_DATABASE: projekt
+    volumes:
+      - webprogmysqlvolume:/var/lib/mysql
+
+volumes:
+  webprogmysqlvolume:

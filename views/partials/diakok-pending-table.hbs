@@ -1,0 +1,27 @@
+{{#if diakokPending}}
+  <table class='pending'>
+    <thead>
+      <tr>
+        <th class='approval-column'></th>
+        <th>ID</th>
+        <th>Felhasználónév</th>
+        <th>Fiókállapot</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each diakokPending as |diak|}}
+        <tr>
+          <td class='approval-column'>
+            <button type='button' class='reject-button'>✕</button>
+            <button type='button' class='approve-button'>✓</button>
+          </td>
+          <td>{{diak.ID}}</td>
+          <td class='column-username'>{{diak.Felhasznalonev}}</td>
+          <td>{{diak.Fiokallapot}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p>Nincsenek jóváhagyásra váró regisztrációk.</p>
+{{/if}}

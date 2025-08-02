@@ -1,0 +1,44 @@
+<div id="palya-page">
+    <div class="palya">
+        <div class="palya-details">
+            <p><span class="detail-key important-detail">Pálya </span><span class="detail-value important-detail">{{palya.ID}}</span></p>
+            <p><span class="detail-key">Típus:</span> <span class="detail-value">{{palya.Tipus}}</span></p>
+            <p><span class="detail-key">Órabér:</span> <span class="detail-value">{{palya.Oraber}} RON</span></p>
+            <p><span class="detail-key">Cím:</span> <span class="detail-value">{{palya.Cim}}</span></p>
+            <p><span class="detail-key">Leírás:</span> <span class="detail-value">{{palya.Leiras}}</span></p>
+            <p><span class="detail-key">Nyitvatartás:</span> <span class="detail-value">{{palya.Nyitas}} - {{palya.Zaras}}</span></p>
+        </div>
+    </div>
+
+    <div>
+        {{#ifEquals userInfo.role 'admin'}}
+            {{> kepek deletable=true full-size=false}}
+            {{> kepfeltoltes}}
+        {{else}}
+            {{> kepek deletable=false full-size=true}}
+        {{/ifEquals}}
+    </div>
+
+    {{#ifEquals userInfo.role 'vendeg'}}{{else}}
+        <div>
+            {{#ifEquals userInfo.role 'admin'}}
+                <h2>Foglalások erre a pályára</h2>
+                {{#if foglalasok}}
+                    {{> foglalasok hide-palyaid=true}}
+                {{else}}
+                    <p class="center">Nincsenek foglalások erre a pályára.</p>
+                {{/if}}
+            {{else}}
+                <h2>Foglalásaim erre a pályára</h2>
+                {{#if foglalasok}}
+                    {{> foglalasok hide-foglalasid=true hide-felhasznalonev=true hide-palyaid=true}}
+                {{else}}
+                    <p class="center">Nincsenek foglalásai erre a pályára.</p>
+                {{/if}}
+            {{/ifEquals}}
+        </div>
+    {{/ifEquals}}
+    {{#if userInfo.loggedIn}}
+        {{> foglalas-keszites}}
+    {{/if}}
+</div>

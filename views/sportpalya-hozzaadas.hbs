@@ -1,0 +1,43 @@
+<div class='wrapper form-wrapper'>
+  <h1>Sportpálya hozzáadása</h1>
+  <form action='/submit-form/sportpalya-hozzaadas' method='post' id='sportpalya-hozzaadas-form'>
+    <div class='form-row'>
+      <label for='palyaTipus'>Pályatípus</label>
+      <select id='palyaTipus' name='palyaTipus' required>
+        <option value='' disabled selected>-</option>
+        <option value='kosarlabda'>Kosárlabda</option>
+        <option value='foci'>Foci</option>
+        <option value='tenisz'>Tenisz</option>
+        <option value='baseball'>Baseball</option>
+        <option value='röplabda'>Röplabda</option>
+      </select>
+    </div>
+
+    <div class='form-row'>
+      <label for='oraber'>Órabér(RON)</label>
+      <input type='text' id='oraber' name='oraber' required />
+    </div>
+
+    <div class='form-row'>
+      <label for='cim'>Cím</label>
+      <input type='text' id='cim' name='cim' required />
+    </div>
+
+    <div class='form-row'>
+      <label for='leiras'>Leírás</label>
+      <input type='text' id='leiras' name='leiras' required />
+    </div>
+
+    <div class='form-row'>
+      <label for='nyitas'>Nyitás</label>
+      <input type='time' id='nyitas' name='nyitas' required />
+    </div>
+
+    <div class='form-row'>
+      <label for='zaras'>Zárás</label>
+      <input type='time' id='zaras' name='zaras' required />
+    </div>
+
+    <button type='submit' class='form-row tight'>Hozzáad</button>
+  </form>
+</div>

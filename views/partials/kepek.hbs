@@ -1,0 +1,24 @@
+<div class='img-listing'>
+  {{#if palya.Kepek}}
+    {{#if deletable}}
+      <div class='card-container'>
+        {{#each palya.Kepek as |kep|}}
+          <div class='card {{#if ../full-size}}fill{{/if}}'>
+            <button class='img-delete-button'>Törlés</button>
+            <img src='{{kep}}' alt='palya_kep'/>
+          </div>
+        {{/each}}
+      </div>
+    {{else}}
+      <div class='card-container'>
+        {{#each palya.Kepek as |kep|}}
+          <div class='card {{#if ../full-size}}fill{{/if}}'>
+            <img src='{{kep}}' alt='palya_kep'/>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  {{else}}
+    <p class="center">Nincsenek képek erről a pályáról.</p>
+  {{/if}}
+</div>

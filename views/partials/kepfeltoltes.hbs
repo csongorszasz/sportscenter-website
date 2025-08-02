@@ -1,0 +1,13 @@
+<div class='wrapper form-wrapper'>
+  <h2>Kép feltöltése</h2>
+  <form action='/submit-form/kepfeltoltes' method='post' enctype='multipart/form-data' id='kepfeltoltes-form'>
+    <input type='hidden' name='palyaId' value='{{palya.ID}}' />
+
+    <div class='form-row'>
+      <label for='kep'>Kép</label>
+      <input type='file' id='kep' name='kep' required />
+    </div>
+
+    <button type='submit' class='form-row tight'>Feltölt</button>
+  </form>
+</div>

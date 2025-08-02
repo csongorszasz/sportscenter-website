@@ -1,0 +1,42 @@
+<div class='wrapper'>
+  <h2>Új foglalás</h2>
+  <div class='custom-datepicker'>
+    <div class='container-fluid px-0 px-sm-4 mx-auto'>
+      <div class='row justify-content-center mx-0'>
+        <div class='col-lg-10'>
+          <div class='card border-0'>
+            <form autocomplete='off' action='/submit-form/foglalas-keszites' method='get' class='appointment-creator'>
+              <input type='hidden' name='palyaId' value='{{palya.ID}}' />
+              <input type='hidden' name='felhasznalonev' value='{{userInfo.felhasznalonev}}' />
+              <input type='hidden' name='ora' value='' />
+              <div class='card-header bg-dark'>
+                <div class='mx-0 mb-0 row justify-content-sm-center justify-content-start px-1'>
+                  <input
+                    type='text'
+                    id='dp1'
+                    class='datepicker'
+                    placeholder='Válasszon egy napot'
+                    name='date'
+                    required
+                  /><span class='fa fa-calendar'></span>
+                  <input
+                    type='number'
+                    name='idotartam'
+                    placeholder='Időtartam (óra)'
+                    class='duration-picker'
+                    required
+                  />
+                </div>
+              </div>
+              <div class='card-body p-3 p-sm-5'>
+                <div class='row text-center mx-0 time-inputs'>
+                </div>
+              </div>
+              <button type='submit'>Létrehoz</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

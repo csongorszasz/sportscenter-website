@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th class='deleter-column'></th>
+      <th class='{{#if hide-foglalasid}}hidden{{/if}}'>Foglalás ID</th>
+      <th class='{{#if hide-felhasznalonev}}hidden{{/if}}'>Felhasználónév</th>
+      <th class='{{#if hide-palyaid}}hidden{{/if}}'>Pálya ID</th>
+      <th>Időpont</th>
+      <th>Időtartam (óra)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each foglalasok as |foglalas|}}
+      <tr>
+        <td class='deleter-column'><button type='button' class='delete-button'>Törlés</button></td>
+        <td class='{{#if ../hide-foglalasid}}hidden{{/if}}'>{{foglalas.FoglalasID}}</td>
+        <td class='column-username {{#if ../hide-felhasznalonev}}hidden{{/if}}'>{{foglalas.Felhasznalonev}}</td>
+        <td class='column-palyaid {{#if ../hide-palyaid}}hidden{{/if}}'>{{foglalas.PalyaID}}</td>
+        <td class='column-datetime'>{{foglalas.Idopont}}</td>
+        <td>{{foglalas.Idotartam}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

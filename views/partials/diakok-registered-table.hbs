@@ -1,0 +1,28 @@
+{{#if diakokRegistered}}
+  <table class='registered'>
+    <thead>
+      <tr>
+        <th class='banning-column'></th>
+        <th>ID</th>
+        <th>Felhasználónév</th>
+        <th>Fiókállapot</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each diakokRegistered as |diak|}}
+        <tr>
+          {{#ifEquals diak.Fiokallapot 'kitiltva'}}
+            <td class='banning-column'><button type='button' class='unban-button'>Feloldás</button></td>
+          {{else}}
+            <td class='banning-column'><button type='button' class='ban-button'>Kitiltás</button></td>
+          {{/ifEquals}}
+          <td class='column-ID'>{{diak.ID}}</td>
+          <td class='column-username'>{{diak.Felhasznalonev}}</td>
+          <td class='column-fiokallapot'>{{diak.Fiokallapot}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p>Nincsenek regisztrált diákok.</p>
+{{/if}}

@@ -1,0 +1,18 @@
+<div class="middle top-space">
+    <div class="login-form">
+        <h3>Regisztráció</h3>
+        <form action='/submit-form/register' method='post' id='registration-form'>
+            <div class='form-row'>
+                <input type='text' name='felhasznalonev' placeholder="Felhasználónév" required/>
+            </div>
+            <div class='form-row'>
+                <input type='password' name='jelszo' placeholder="Jelszó" required/>
+            </div>
+            <div class='form-row'>
+                <input type='password' name='jelszo-again' placeholder="Ismételje meg a jelszavát" required/>
+            </div>
+            <button type='submit' class='form-row'>Regisztráció</button>
+        </form>
+        <p>Már van fiókja? <a href="/login">Bejelentkezés</a></p>
+    </div>
+</div>
