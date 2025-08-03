@@ -1,4 +1,4 @@
-# Sport Center Reservations Manager Website
+# Sport Center Reservation Managing Website
 
 ## Demo
 
